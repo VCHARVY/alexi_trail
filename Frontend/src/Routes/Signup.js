@@ -43,10 +43,11 @@ const SignupData = {
   UserId,Age,
   Gender
 };
+
 alert(SignupData.name);
     try{
       const { data }=await axios.post(
-        'http://localhost:5000/api/user/Signup',config,SignupData)
+        'http://localhost:3000/api/user/Signup',SignupData,config)
         
         
         alert("work");

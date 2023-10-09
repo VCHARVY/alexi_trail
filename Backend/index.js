@@ -1,5 +1,6 @@
 const express =require('express');
 require('dotenv').config();
+const CORS =require('cors');
 const signuproute=require('./routes/Signup_route');
 const mongoDB=require('./config/DB');
 // const { default: Signup } = require('../Frontend/src/Routes/Signup');
@@ -28,6 +29,7 @@ const app = express();
 mongoDB();
 
 app.use(express.json());
+app.use(CORS);
 app.use(express.urlencoded({ extended: true }));
 
 const port = process.env.PORT;

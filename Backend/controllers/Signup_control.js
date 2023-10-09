@@ -3,7 +3,7 @@ const User = require('../models/Signup_model');
 
 const registerUser = asyncHandler(async (req, res) => {
     const { name, email, password, address, UserId, Age, Gender } = req.body;
-
+    console.log(req.body);
     // Validation
     if (!name || !email || !password || !address || !UserId || !Age || !Gender) {
         res.status(400);
