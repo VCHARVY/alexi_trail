@@ -1,0 +1,10 @@
+.box2 
+{
+display: flex;
+height: 100vh; /* 100% of the viewport height */
+justify-content: center; /* Center horizontally */
+align-items: center; /* Center vertically */
+background-image: url(../../public/Images/user_page.jpeg); 
+background-size: cover;
+background-position: center;
+}

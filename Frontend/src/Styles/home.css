@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../../public/Images/Home_background.jpg);
+  background-size: cover;
+}
+
+.Intro-para {
+  color: rgb(222, 228, 255);
+  margin: 5vmin;
+  font-size: 18px;
+}
