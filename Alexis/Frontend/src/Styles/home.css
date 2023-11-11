@@ -1,0 +1,15 @@
+.App, .About, .Contact  {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../../public/Images/Home_background.jpg);
+  background-size: cover;
+}
+
+*{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+::-webkit-scrollbar  {
+  display: none;
+}

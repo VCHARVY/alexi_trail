@@ -1,0 +1,134 @@
+
+.App-header {
+    background-color: transparent;
+    width: 100vw;
+    height: 8vh;
+    min-height: 50px;
+    min-width: 350px;
+    position: fixed;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 40px;
+    color: rgb(255, 235, 222);
+    padding-top: 2vh;
+    z-index: 10;
+}
+
+.nav-header {
+    display: flex;
+    position: relative;
+    left: 0%;
+    width: 60vw;
+    font-size: 40px;
+    top: 30%;
+    justify-content: flex-start;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.headerLink:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.2s ease-in-out;
+}
+
+.headerLink:active {
+    opacity: 0.7;
+    transition: 0.2 ease-in-out;
+}
+
+.Logo-header {
+    position: relative;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 45%; 
+    width: 20vw;
+    font-size: 45px;
+    padding: 5px;
+}
+
+.headerLink {
+    border: none;
+    text-decoration: none;
+    color: rgb(255, 235, 222);
+    background: none;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+
+.Hamburger {
+    display: none;
+    position: relative;
+    cursor: pointer;
+    width: 40px;
+    left: 0%;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: rgb(255, 235, 222);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out ;
+    margin: 5px auto;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 800px) {
+    .Hamburger {
+        justify-content: flex-start;
+        padding-left: 4vw;
+        display: block;
+        backdrop-filter: blur(5px);
+    }
+    .nav-header{
+        position: fixed;
+        display: none;
+        top: 10vh;
+        left: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        transition: 0.3s;   
+    }
+    .Logo-header {
+        justify-content: flex-end;
+        backdrop-filter: blur(5px);
+    }
+
+    .Hamburger.active .bar:nth-child(1) {
+        -webkit-transform: rotate(-45deg) translate(-5px, 5px) ;
+        transform: rotate(-45deg)  translate(-5px, 5px);
+    }
+    .Hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .Hamburger.active .bar:nth-child(3) {
+        -webkit-transform: rotate(45deg) translate(-5px, -5px) ;
+        transform: rotate(45deg) translate(-5px, -5px) ;
+    }
+    .nav-header.active {
+        display: flex;
+    }
+    .Logo-header {
+        font-size: 30px;
+        width: fit-content;
+        transition: all 0.3s ease-in-out;
+    }
+    .Logo-para {
+        margin: 0%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .Logo-header {
+        font-size: 20px;
+        width: fit-content;
+        top : 20px;
+    }
+}
