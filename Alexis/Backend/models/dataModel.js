@@ -8,6 +8,14 @@ const dataSchema = mongoose.Schema({
 const simulateData = mongoose.Schema({
     attr: [dataSchema]
 })
+const patientSchema = mongoose.Schema({
+    Height:String,
+    Weight: String,
+    Gender: String,
+    Age: String,
+    occupation:String
+})
 
 const dataModel = mongoose.model("dataModel", simulateData)
-module.exports = dataModel;
+const patientModel=mongoose.model("patientModel",patientSchema)
+module.exports = {dataModel,patientModel};

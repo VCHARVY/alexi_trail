@@ -1,0 +1,59 @@
+.medicine-container {
+    background-image: url('../../public/Images/transition2.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  height: 100vh; 
+   display: flex;
+
+  flex-direction: column;
+  align-items: left; 
+ justify-content: center; 
+  }
+  
+  .Med-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-size: 3rem;
+  color: #fff;
+  padding-left:280px;
+  /* transform: translate(-50%, -50%); */
+  }
+  
+  .inputtext {
+   
+    margin-top: 20px;
+    padding:5px;
+    padding-left:280px
+  }
+  
+  .components-container {
+    margin-top: 20px;
+    padding-left:285px;
+    width:550px
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .Med-button
+  {
+    padding-left:280px;
+  }
+  
+  .Med-button button {
+    margin-top: 20px;
+ 
+  padding: 10px;
+ 
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  background-color:#27c12e ;
+  color: white;
+  cursor: pointer;
+  }
+  

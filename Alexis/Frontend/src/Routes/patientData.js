@@ -25,21 +25,21 @@ function PatientData() {
    
     try {
       console.log("reached here2");
-      const config = {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      };
+      // const config = {
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      // };
       const patientData = {
        
-        Age,
-        Gender,
         Height,
         Weight,
+        Gender,
+        Age,
         occupation
       };
-      const { data } = await axios.post('http://localhost:5000/api/user/signUp', patientData,
-        config).catch((error) => {
+      const { data } = await axios.post('http://localhost:5000/api/data/patient/', patientData)
+        .catch((error) => {
           console.log(error);
           
         });
@@ -47,7 +47,7 @@ function PatientData() {
       console.log("reached here3");
       localStorage.setItem('userinfo', JSON.stringify(data));
     
-      navigate('/');
+      navigate('/Models');
     }
     catch (error) {
       
@@ -62,29 +62,29 @@ function PatientData() {
     }
   }
   return (
-    <div className='box1'>
+    <div className='box3'>
       <div className='position'>PATIENT DETAILS</div>
-      <div className='second'>
+      <div className='second2'>
        
-        <div className='input1'>
+        <div className='input3'>
           <input type="text" onChange={(e) => setGender(e.target.value)} placeholder='Gender' />
         </div>
-        <div className='input1'>
+        <div className='input3'>
           <input type="text" onChange={(e) => setHeight(e.target.value)} placeholder='Height' />
         </div>
-        <div className='input1'>
+        <div className='input3'>
           <input type="text" onChange={(e) => setWeight(e.target.value)} placeholder='Weight' />
         </div>
         
-        <div className='input1'>
+        <div className='input3'>
           <input type="text" onChange={(e) => setAge(e.target.value)} placeholder='age' />
         </div>
-        <div className='input1'>
+        <div className='input3'>
           <input type="text" onChange={(e) => setoccupation(e.target.value)} placeholder='occupation' />
         </div>
        
       </div>
-      <div className='button1'>
+      <div className='button3'>
           <button onClick={handlepatient}>Simulate</button>
      </div>
      

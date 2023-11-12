@@ -10,7 +10,9 @@ import EditDBTransition from './Routes/EditDBTransition';
 import Logout from './Routes/Logout';
 import PatientData from './Routes/patientData';
 import { AuthProvider } from './Routes/Authcontext'; 
-
+import PermissableLevels from './Routes/PermissableLevels';
+import MedicineData from './Routes/MedicineData';
+import Models from './Routes/Models';
 
 function App() {
  
@@ -21,14 +23,17 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/editDB" element={<EditDBTransition/>} />
+            <Route path="/Models" element={<Models/>} />
             <Route path="/about" element={<About/>} />
             <Route path="/login" element={<Login />} />
             <Route path="/Signup" element={<Signup />} />
             <Route path="/User_page" element={<User_page />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/MedicineData" element={<MedicineData />} />
             <Route path="/patientData" element={<PatientData/>} />
             <Route path="/simulate" element={<User_page />} />
             <Route path="/logout" element={<Logout />} />
+            <Route path="/PermissableLevel" element={<PermissableLevels/>} />
           </Routes>
           </AuthProvider>
         </Router>
